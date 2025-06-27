@@ -1,4 +1,3 @@
-
 <h1 align="center">npx vishalrmahajan</h1>
 
 <p align="center">
@@ -12,12 +11,8 @@
 `npx vishalrmahajan` is a one-command, interactive portfolio that runs entirely in your terminal. Launching it with npx instantly opens a colorful, ASCII-styled UI where you can browse my portfolio through typed commands or keyboard navigation
 
 ## Demo
+
 https://github.com/user-attachments/assets/dd4390e8-175d-48ba-9aea-6702740eb776
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vishalrmahajan/npx-vishalrmahajan/main/assets/demo.gif" alt="CLI Demo" width="90%">
-</p>
 
 ## Try it out
 
