@@ -160,6 +160,9 @@ function processTerminalCommand() {
         if (idx >= 0) {
           selected = idx;
           drawTaskbar();
+          if (typeof global.showSection === "function") {
+            global.showSection(result.tab);
+          }
         }
         break;
       case "exit":

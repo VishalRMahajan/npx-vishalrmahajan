@@ -51,7 +51,7 @@ export function processCommand(command) {
     case "quit":
       return { action: "exit" };
 
-    case "Chat":
+    case "chat":
       return Chat();
 
     default:
@@ -101,17 +101,16 @@ function getWhoami() {
 
 function getHelp() {
   return [
-    "help            Show this help message",
     "whoami          Display my information",
     "open [option]   Open website in browser (resume, github, linkedin, x)",
     "clear           Clear the terminal",
     "list            List all available commands",
     "[Tabs]          Go to specific tab (eg. skills, experience, projects, home)",
     "exit            Exit the application",
-    "Chat            Chat with me",
+    "chat            Chat with me",
   ].join("\n");
 }
 
 function listCommands() {
-  return "Available commands: help, whoami, open, clear, list, skills, experience, projects, home, exit";
+  return "Available commands: help, whoami, open, clear, list, skills, experience, projects, home, exit, chat";
 }

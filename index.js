@@ -12,15 +12,22 @@ import showHome from "./sections/home.js";
 import showSkills from "./sections/skills.js";
 import showExperience from "./sections/experience.js";
 import showProjects from "./sections/projects.js";
-import { FULL_NAME } from "./data.js";
+import { FULL_NAME, COLORS } from "./data.js";
+import { startupProgress, exitProgress } from "./loader.js";
 
 const term = termkit.terminal;
 const tabs = ["Home", "Skills", "Experience", "Projects"];
 let selected = 0;
 
 function drawInstructions() {
-  term.gray("Tab: navigate     ESC : exit");
+  const instruction = "Tab: Navigate    Ctrl+Click: Open Link    ESC: Exit";
+  term.moveTo(1, term.height);
+  term.eraseLine();
+  term.colorRgbHex(term.gray(), instruction);
 }
+
+term.clear();
+await startupProgress();
 
 initTerminal(tabs, selected);
 showSection(tabs[selected]);
@@ -43,11 +50,8 @@ term.on("key", (name, matches, data) => {
       break;
     case "ESCAPE":
     case "CTRL_C":
-      term("\u0007");
-      term.fullscreen(false);
-      term.clear();
-      term.magenta.bold("\nGoodbye!\n\n");
-      process.exit();
+      exitProgress();
+      break;
     default:
       handleTerminalInput(name);
       break;
@@ -93,3 +97,5 @@ function showSection(name) {
 
   drawTerminal();
 }
+
+global.showSection = showSection;

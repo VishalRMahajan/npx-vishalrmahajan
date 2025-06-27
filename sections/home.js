@@ -21,6 +21,7 @@ export default function showHome() {
 
   const contactsContent = [
     `Email:     ${CONTACTS.email}`,
+    `Website:   ${CONTACTS.website}`,
     `X:         x.com/${CONTACTS.x}`,
     `GitHub:    github.com/${CONTACTS.github}`,
     `LinkedIn:  linkedin.com/in/${CONTACTS.linkedin}`,
@@ -46,6 +47,11 @@ export default function showHome() {
       styledContent = terminalLink(
         chalk.hex(COLORS.secondary).bold(contentPart),
         `mailto:${CONTACTS.email}`
+      );
+    } else if (labelPart === "Website:") {
+      styledContent = terminalLink(
+        chalk.hex(COLORS.secondary).bold(CONTACTS.website),
+        `https://${CONTACTS.website}`
       );
     } else if (labelPart === "X:") {
       styledContent = terminalLink(
