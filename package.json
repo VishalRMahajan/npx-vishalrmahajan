@@ -1,7 +1,7 @@
 {
   "name": "vishalrmahajan",
   "version": "1.1.0",
-  "description": "CLI Portfolio for VishalRMahajan run with `npx vishalrmahajan`",
+  "description": "CLI Portfolio for VishalRMahajan (run `npx vishalrmahajan`)",
   "main": "index.js",
   "bin": {
     "vishalrmahajan": "./index.js"
