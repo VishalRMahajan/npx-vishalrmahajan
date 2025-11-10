@@ -39,7 +39,7 @@ export const EXPERIENCE = [
     company: "The Good Game Theory",
     website: "https://thegoodgametheory.com",
     location: "Remote",
-    duration: "May 2025 - Current",
+    duration: "May 2025 - July 2025",
   },
 ];
 
